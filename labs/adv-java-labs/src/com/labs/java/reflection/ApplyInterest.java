@@ -1,0 +1,12 @@
+package com.labs.java.reflection;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ApplyInterest {
+    double roi() default 7.5;
+}
