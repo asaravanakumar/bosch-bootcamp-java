@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.bosch.infotainment'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.google.protobuf:protobuf-java:4.28.3'
+    implementation 'com.bosch.infotainment:navigation-service:1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
